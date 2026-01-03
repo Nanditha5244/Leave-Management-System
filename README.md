@@ -227,3 +227,51 @@ Register a new user → login → apply leaves → view history → access admin
 ✔ User can register, login, apply leave, and view leave history
 ✔ Admin can view all leaves and update status
 ✔ Integrated and tested with backend APIs
+Day 4 – Leave Balance & Business Logic
+
+On the fourth day, leave balance and core leave business logic are implemented in the backend. This day focuses on managing leave limits, calculating leave balances automatically, and validating leave requests before approval.
+
+✅ Features Implemented on Day 4
+1. Leave Balance Management
+
+Each user is assigned a leave balance.
+
+Leave balance is stored in the leave_balance table.
+
+Leave balance is linked with the users table.
+
+2. Leave Types
+
+The system supports the following leave types:
+
+CASUAL
+
+SICK
+
+EARNED
+
+These are managed using an enum and mapped consistently across entities and services.
+
+3. Automatic Leave Balance Calculation
+
+When a user applies for leave:
+
+The system checks available balance.
+
+The number of leave days is calculated using start date and end date.
+
+Leave balance is reduced automatically if sufficient balance exists.
+
+If balance is insufficient, leave request is rejected.
+
+4. Leave Request Validation
+
+Before saving a leave request:
+
+User existence is verified.
+
+Leave type is validated.
+
+Start date and end date are checked.
+
+Leave balance is verified.
