@@ -1,277 +1,133 @@
-# Leave Management System
+# Leave Management System – Backend (Day-wise Implementation)
 
-This project will be developed step by step as part of my learning process.
+This document explains the backend development of the Leave Management System
+in a clear day-by-day manner. The backend is
+This helps in understanding how the system was built step by step.
 
-Day 1 – Project Setup & Requirement Analysis
-✅ Completed Tasks:
+---
 
-Understood project requirements for the Leave Management System
+## Day 1 – Project Setup & Database Configuration
 
-Defined system modules and user roles (Admin, Manager, Employee)
+On the first day, the backend project was created using Spring Boot.
+Basic configurations were done to connect the application with the database.
 
-Designed basic application flow and architecture
+Key work:
+- Created Spring Boot project
+- Configured database connection
+- Verified application startup
+- Created basic project structure
 
-Set up Spring Boot project using Spring Initializr
+Outcome:
+The backend application was successfully connected to the database.
 
-Configured project dependencies:
+---
 
-Spring Web
+## Day 2 – User Registration & Authentication
 
-Spring Data JPA
+On the second day, user authentication functionality was implemented.
+This allows users to register and log in securely.
 
-Spring Security
+Key work:
+- User registration logic
+- Login validation
+- Password encryption
+- Token-based authentication
 
-MySQL Driver
+Outcome:
+Users can securely register and log in to the system.
 
-Lombok
+---
 
-Configured application.properties for database connection
+## Day 3 – Leave Application Module
 
-Verified project build and application startup
+On the third day, the leave application functionality was developed.
+Users can apply for leave by providing required details.
 
-Initialized Git repository and pushed initial project structure
+Key work:
+- Leave apply API
+- Accept start date, end date, and leave type
+- Automatic calculation of leave days
+- Store leave request with pending status
 
-🛠️ Technologies Used
+Outcome:
+Users can successfully apply for leave and view submitted requests.
 
-Java
+---
 
-Spring Boot
+## Day 4 – Leave Approval & Rejection
 
-Maven
+On the fourth day, leave approval and rejection logic was implemented.
+Authorized users can take action on pending leave requests.
 
-MySQL
+Key work:
+- Approve leave functionality
+- Reject leave functionality
+- Update leave status in database
+- Validate access before approval
 
-Git & GitHub
+Outcome:
+Leave requests can be approved or rejected properly.
 
-Spring Tool Suite (STS)
+---
 
-📌 Output
+## Day 5 – Leave Balance Calculation
 
-✔ Project setup completed successfully
-✔ Application running without errors
-✔ Ready for backend module development
+On the fifth day, leave balance functionality was added.
+The system automatically calculates used and remaining leaves.
 
-Day 2 – Backend Setup & Authentication Module
-✅ Completed Tasks:
+Key work:
+- Count approved leaves
+- Calculate total used leave days
+- Provide remaining leave balance
+- Display balance through API
 
-Created Spring Boot backend project
+Outcome:
+Leave balance updates automatically based on approved leaves.
 
-Configured project structure using MVC architecture
+---
 
-Implemented User Entity and Role Entity
+## Day 6 – Security & Validation
 
-Created Repository layer using JPA
+On the sixth day, security and validation were strengthened to protect APIs.
 
-Implemented Service layer for business logic
+Key work:
+- API access protection
+- Token validation
+- Input validation
+- Error handling
 
-Created REST APIs for:
+Outcome:
+The backend is secure and prevents unauthorized access.
 
-User registration
+---
 
-User login
+## Day 7 – Testing & Finalization
 
-Implemented JWT-based authentication
+On the final day, complete backend testing and refinement were done.
 
-Configured Spring Security
+Key work:
+- API testing using Postman
+- Verified leave flow end-to-end
+- Fixed errors and edge cases
+- Prepared backend for frontend integration
 
-Enabled role-based access control
+Outcome:
+Backend is stable, tested, and ready for frontend usage.
 
-Tested APIs using Postman
+---
 
-🛠️ Technologies Used
+## Technologies Used
 
-Java
+- Java
+- Spring Boot
+- Spring Security
+- JPA / Hibernate
+- MySQL
+- Maven
 
-Spring Boot
+---
 
-Spring Security
+## Final Status
 
-JWT (JSON Web Token)
-
-Hibernate / JPA
-
-MySQL
-
-Maven
-
-📂 Project Structure
-src/main/java
- ├── controller
- ├── service
- ├── repository
- ├── entity
- ├── config
- └── security
-
- 🚀 How to Run the Project
-
-Clone the repository
-
-Open in Spring Tool Suite (STS)
-
-Configure database in application.properties
-
-Run the application
-
-Test APIs using Postman
-Day 3 – Frontend Implementation (React + Axios)
-
-✅ Completed Tasks:
-
-Set up React frontend for the Leave Management System
-
-Installed required dependencies:
-
-react-router-dom for page routing
-
-axios for API calls
-
-bootstrap & react-icons for styling and UI
-
-Created frontend pages:
-
-Login Page – user login
-
-Register Page – user registration
-
-Apply Leave Page – apply for leave
-
-Leave History Page – view leave history
-
-Admin Dashboard – admin view for all leaves
-
-Implemented React Router for navigation:
-
-/ → Login
-
-/register → Register
-
-/apply → Apply Leave
-
-/history → Leave History
-
-/admin → Admin Dashboard
-
-Integrated axios to call Spring Boot backend APIs:
-
-/auth/register → register user
-
-/auth/login → login user
-
-/leave/apply/{userId} → apply leave
-
-/leave/user/{userId} → view user leave history
-
-/leave/all → admin view all leaves
-
-/leave/status/{leaveId} → update leave status
-
-Added Bootstrap styling for forms, buttons, and navbar
-
-Added react-icons for better UI/UX
-
-Configured CORS in backend to allow frontend (http://localhost:3000) communication
-
-Tested frontend-backend integration successfully:
-
-User can register → login → apply leave → view history
-
-Admin can view and update leave requests
-
-🛠️ Technologies Used:
-
-React.js
-
-Axios
-
-React Router DOM
-
-Bootstrap
-
-React Icons
-
-JavaScript
-
-HTML & CSS
-
-📂 Project Structure
-
-src
- ├── App.js
- ├── index.js
- ├── pages
- │    ├── Login.js
- │    ├── Register.js
- │    ├── ApplyLeave.js
- │    ├── LeaveHistory.js
- │    └── AdminDashboard.js
- └── components
-      └── Navbar.js
-
-
-🚀 How to Run the Frontend
-
-Navigate to frontend project folder in terminal
-
-Run npm install to install dependencies
-
-Run npm start to start the development server
-
-Open http://localhost:3000 in the browser
-
-Register a new user → login → apply leaves → view history → access admin dashboard
-
-📌 Output
-
-✔ Frontend running successfully
-✔ User can register, login, apply leave, and view leave history
-✔ Admin can view all leaves and update status
-✔ Integrated and tested with backend APIs
-Day 4 – Leave Balance & Business Logic
-
-On the fourth day, leave balance and core leave business logic are implemented in the backend. This day focuses on managing leave limits, calculating leave balances automatically, and validating leave requests before approval.
-
-✅ Features Implemented on Day 4
-1. Leave Balance Management
-
-Each user is assigned a leave balance.
-
-Leave balance is stored in the leave_balance table.
-
-Leave balance is linked with the users table.
-
-2. Leave Types
-
-The system supports the following leave types:
-
-CASUAL
-
-SICK
-
-EARNED
-
-These are managed using an enum and mapped consistently across entities and services.
-
-3. Automatic Leave Balance Calculation
-
-When a user applies for leave:
-
-The system checks available balance.
-
-The number of leave days is calculated using start date and end date.
-
-Leave balance is reduced automatically if sufficient balance exists.
-
-If balance is insufficient, leave request is rejected.
-
-4. Leave Request Validation
-
-Before saving a leave request:
-
-User existence is verified.
-
-Leave type is validated.
-
-Start date and end date are checked.
-
-Leave balance is verified.
+The backend of the Leave Management System is fully implemented,
+tested, and ready for integration with the frontend.
