@@ -131,3 +131,29 @@ Backend is stable, tested, and ready for frontend usage.
 
 The backend of the Leave Management System is fully implemented,
 tested, and ready for integration with the frontend.
+# LMS Login & OTP Registration Flow
+
+This module implements authentication and onboarding for LMS (Leave Management System) with Admin-controlled OTP registration for Employees & Managers.
+
+---
+
+## 🚀 Features
+
+### 🔐 **Login System**
+- Admin, Manager and Employee can login
+- Role-based routing:
+  | Role | Redirect |
+  |------|----------|
+  | ADMIN | `/admin-dashboard` |
+  | MANAGER | `/manager-dashboard` |
+  | EMPLOYEE | `/employee-dashboard` |
+
+- Admin credentials are seeded in database
+- Invalid login shows error message
+
+---
+
+### 👥 **Admin-Controlled Registration**
+Employee and Manager accounts cannot self-register.
+
+Only Admin can create new accounts from:
